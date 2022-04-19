@@ -14,6 +14,7 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Application.targetFrameRate = 60;
         transform.Translate(Vector3.up * camSpeed * Time.deltaTime);
     }
 }

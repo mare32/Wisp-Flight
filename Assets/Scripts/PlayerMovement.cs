@@ -1,15 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 public class PlayerMovement : MonoBehaviour
 {
-    //public Rigidbody2D rb = new Rigidbody2D();
     public Vector2 speed = new Vector2(10,10);
-
+    public TextMeshProUGUI speedText;
     // Start is called before the first frame update
     void Start()
     {
-
     }
 
     // Update is called once per frame

@@ -1,18 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class MovePlayer : MonoBehaviour
 {
 
     public MovementJoystick movementJoystick;
     public float playerSpeed;
     private Rigidbody2D rb;
+    public TextMeshProUGUI speedText;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        speedText.text = "Speed: " + playerSpeed + "ms";
     }
 
     // Update is called once per frame

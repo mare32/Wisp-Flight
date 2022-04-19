@@ -10,10 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7317443593871101223}
   - component: {fileID: 7317443593871101222}
-  - component: {fileID: 9067765402548103371}
   - component: {fileID: 7134643347128478697}
   m_Layer: 0
-  m_Name: Powerup (2)
+  m_Name: Powerup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84,20 +83,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &9067765402548103371
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317443593871101221}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c89b4629df28824995f64bb1acf02eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  value: 1
-  player: {fileID: 0}
 --- !u!70 &7134643347128478697
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
