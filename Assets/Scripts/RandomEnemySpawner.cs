@@ -9,6 +9,7 @@ public class RandomEnemySpawner : MonoBehaviour
     public Transform[] spawnPoints;
     public Enemy enemy;
     public Player player;
+    //public Material texture;
     //private SpawnState state = SpawnState.COUNTING;
     //public Wave[] waves;
     //private int nextWave = 0;
@@ -68,7 +69,7 @@ public class RandomEnemySpawner : MonoBehaviour
     void SpawnEnemy()
     {
         int randSpawn = Random.Range(0, 5);
-        Debug.Log(randSpawn);
+        //Debug.Log(randSpawn);
         if (spawnPoints[randSpawn] == spawnPoints[0])
         {
             enemy.vertical = false;
@@ -94,6 +95,7 @@ public class RandomEnemySpawner : MonoBehaviour
             enemy.reverse = false;
         }
         enemy.player = player;
+        //enemy.GetComponent<SpriteRenderer>().material.mainTexture = 
         Instantiate(enemy, spawnPoints[randSpawn].position, transform.rotation);
     }
 }

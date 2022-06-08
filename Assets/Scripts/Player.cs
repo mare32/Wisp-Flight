@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
 {
     // Start is called before the first frame update
     public float experience = 0;
-    public float[] xpByLevel = {0, 100,150,200,250,300,450,600,750,900,1100,1300,1600,1900,2200,2500,2800,3200,3600,4000,4500,5000 };
+    [SerializeField]public float[] xpByLevel = {0, 100,150,200,250,300,450,600,750,900,1100,1300,1600,1900,2200,2500,2800,3200,3600,4000,4500,5000 };
     public int level = 1;
     public float passiveDamage = 1f ;
     public float shieldPower  = 0f;

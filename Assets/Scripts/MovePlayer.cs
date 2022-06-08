@@ -9,6 +9,7 @@ public class MovePlayer : MonoBehaviour
     public float playerSpeed;
     private Rigidbody2D rb;
     public TextMeshProUGUI speedText;
+    [SerializeField] private float moveCharacterTestVariable = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -22,10 +23,15 @@ public class MovePlayer : MonoBehaviour
     {
         if (movementJoystick.joystickVec.y != 0)
         {
+            moveCharacterTestVariable+=Time.deltaTime;
             rb.velocity = new Vector2(movementJoystick.joystickVec.x * playerSpeed, movementJoystick.joystickVec.y * playerSpeed);
         }
         else
         {
+            if (moveCharacterTestVariable >= Time.deltaTime)
+                moveCharacterTestVariable -= Time.deltaTime;
+            else
+                moveCharacterTestVariable = 0;
             rb.velocity = Vector2.zero;
         }
     }
