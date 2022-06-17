@@ -48,3 +48,6 @@ TagManager:
   - name: Enemy
     uniqueID: 2835970191
     locked: 0
+  - name: Overlay
+    uniqueID: 1916573603
+    locked: 0

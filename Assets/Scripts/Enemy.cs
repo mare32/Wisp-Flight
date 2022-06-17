@@ -24,7 +24,15 @@ public class Enemy : MonoBehaviour
     private bool arrived = false;
     public GameObject deathParticles;
     public GameObject hpBar;
-    // Start is called before the first frame update
+
+    void Awake ()
+    {
+        if (player == null)
+        {
+           player = FindObjectOfType<GameElements>().playerReference;
+        }
+    }
+
     void Start()
     {
         posX = transform.position.x;

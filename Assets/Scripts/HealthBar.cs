@@ -10,7 +10,14 @@ public class HealthBar : MonoBehaviour
     private float maxHp = 100f;
     public Player player;
     public TextMeshProUGUI health;
-    // Start is called before the first frame update
+
+    void Awake()
+    {
+        //TODO implement better refererncing
+        if (player == null)
+            player = FindObjectOfType<GameElements>().playerReference;
+    }
+
     void Start()
     {
         currentHp = player.health;

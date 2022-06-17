@@ -11,7 +11,14 @@ public class XpBar : MonoBehaviour
     public Player player;
     public TextMeshProUGUI playerLevel;
     public TextMeshProUGUI experienceNumbers;
-    // Start is called before the first frame update
+
+    void Awake()
+    {
+        //TODO implement better refererncing
+        if (player == null)
+            player = FindObjectOfType<GameElements>().playerReference;
+    }
+
     void Start()
     {
         currentXp = player.experience;

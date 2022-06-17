@@ -10,7 +10,14 @@ public class ShieldBar : MonoBehaviour
     private float maxShield = 35f;
     public Player player;
     public TextMeshProUGUI shield;
-    // Start is called before the first frame update
+
+    void Awake()
+    {
+        //TODO implement better refererncing
+        if (player == null)
+            player = FindObjectOfType<GameElements>().playerReference;
+    }
+
     void Start()
     {
         currentShield = player.currentShield;

@@ -25,8 +25,11 @@ public class Player : MonoBehaviour
     public Transform aura;
     public GameObject auraObject;
     public GameObject deathParticles;
+    public SpriteRenderer sprite;
+
     void Start()
     {
+
         //shieldBarImg = shieldBarImg.GetComponent<Image>();
     }
     public void TakeDamage(float amountOfDamage)
@@ -58,7 +61,7 @@ public class Player : MonoBehaviour
     IEnumerator WaitBeforeParticles()
     {
         deathParticles.SetActive(true);
-        gameObject.GetComponent<SpriteRenderer>().color = Color.clear;
+        sprite.color = Color.clear;
         gameObject.GetComponent<TrailRenderer>().enabled = false;
         gameObject.GetComponent<MovePlayer>().playerSpeed = 0;
         gameObject.GetComponent<PlayerMovement>().speed = new Vector2(0,0);
