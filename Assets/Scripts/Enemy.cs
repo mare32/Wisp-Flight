@@ -6,19 +6,27 @@ using UnityEngine.SceneManagement;
 public class Enemy : MonoBehaviour
 {
     public Player player;
+    public SpriteRenderer spriteRenderer;
     public float damage = 30f;
     public float health;
     public float maxHp = 50f;
     public float _speed = 2f;
     public float xpWorth = 30;
+
     public bool horizontal;
+    public AnimationCurve horizontalCurve;
+    public float horizontalMovement = 0.0f;
     public bool vertical;
+    public AnimationCurve verticalCurve;
+    public float verticalMovement = 0.0f;
+
     private float posX;
     private float posY;
     private float posZ;
     private float currentPosX;
     private float currentPosY;
     private float currentPosZ;
+
     public bool reverse;
     public float moveAmount = 5;
     private bool arrived = false;
@@ -61,7 +69,7 @@ public class Enemy : MonoBehaviour
     IEnumerator WaitBeforeParticles()
     {
         deathParticles.SetActive(true);
-        gameObject.GetComponent<SpriteRenderer>().color = Color.clear;
+        spriteRenderer.color = Color.clear;
         hpBar.SetActive(false);
         yield return new WaitForSeconds(.2f);
         var tmpXp = player.experience + xpWorth;

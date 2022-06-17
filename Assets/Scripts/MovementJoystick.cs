@@ -20,7 +20,7 @@ public class MovementJoystick : MonoBehaviour
     void Start()
     {
         joystickOriginalPos = joystickBG.transform.position;
-        joystickRadius = joystickBG.GetComponent<RectTransform>().sizeDelta.y / 2f;
+        joystickRadius = joystickBG.GetComponent<RectTransform>().sizeDelta.y * transform.parent.localScale.x / 2f;
         //image1 = GetComponentInChildren<Image>();
         var tempColor = Joystick.color;
         tempColor.a = 0f;
@@ -35,15 +35,15 @@ public class MovementJoystick : MonoBehaviour
         tempColor.a = .25f;
         Joystick.color = tempColor;
         JoystickBG.color = tempColor;
-        joystick.transform.position = Input.mousePosition;
-        joystickBG.transform.position = Input.mousePosition;
-        joystickTouchPos = Input.mousePosition;
+        joystick.transform.position = GetMousePos(Input.mousePosition);
+        joystickBG.transform.position = GetMousePos(Input.mousePosition);
+        joystickTouchPos = GetMousePos(Input.mousePosition);
     }
 
     public void Drag(BaseEventData baseEventData)
     {
         PointerEventData pointerEventData = baseEventData as PointerEventData;
-        Vector2 dragPos = pointerEventData.position;
+        Vector2 dragPos = GetMousePos(pointerEventData.position);
         joystickVec = (dragPos - joystickTouchPos).normalized;
 
         float joystickDist = Vector2.Distance(dragPos, joystickTouchPos);
@@ -69,6 +69,12 @@ public class MovementJoystick : MonoBehaviour
         tempColor.a = 0f;
         Joystick.color = tempColor;
         JoystickBG.color = tempColor;
+    }
+
+    Vector3 GetMousePos (Vector3 inputPosition)
+    {
+        Vector3 pos = Camera.main.ScreenToWorldPoint(inputPosition);
+        return new Vector3(pos.x, pos.y, 0f);
     }
 
 }
