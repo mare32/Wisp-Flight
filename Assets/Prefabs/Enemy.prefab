@@ -5308,6 +5308,7 @@ GameObject:
   - component: {fileID: 3095987229328943531}
   - component: {fileID: 225611545010576148}
   - component: {fileID: 2972101282741745234}
+  - component: {fileID: 5220059869764443605}
   m_Layer: 0
   m_Name: SpriteRoot
   m_TagString: Enemy
@@ -5361,7 +5362,7 @@ MonoBehaviour:
   - {x: -0.46843147, y: -0.0028302073, z: 0}
   m_ShapePathHash: 910803637
   m_Mesh: {fileID: 0}
-  m_InstanceId: 83426
+  m_InstanceId: 105046
 --- !u!60 &225611545010576148
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5416,6 +5417,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5220059869764443605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7635879325507702093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ede36c5ce0c9ea4bb2ddabfeac8d119, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotation: 2000
+  playerSprite: {fileID: 8652686076391927956}
 --- !u!1 &7985462790239693547
 GameObject:
   m_ObjectHideFlags: 0
