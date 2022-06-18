@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 027699acc59add849ba8d68671715b62, type: 3}
   m_Name: BasicGameData
   m_EditorClassIdentifier: 
+  constantGravityModifier: -1

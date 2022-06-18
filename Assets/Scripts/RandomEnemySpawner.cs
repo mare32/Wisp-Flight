@@ -70,7 +70,7 @@ public class RandomEnemySpawner : MonoBehaviour
     {
         int randSpawn = Random.Range(0, 5);
         //Debug.Log(randSpawn);
-        if (spawnPoints[randSpawn] == spawnPoints[0])
+        /*if (spawnPoints[randSpawn] == spawnPoints[0])
         {
             enemy.vertical = false;
             enemy.horizontal = true;
@@ -93,9 +93,10 @@ public class RandomEnemySpawner : MonoBehaviour
             enemy.horizontal = false;
             enemy.vertical = true;
             enemy.reverse = false;
-        }
-        enemy.player = player;
+        }*/
+
         //enemy.GetComponent<SpriteRenderer>().material.mainTexture = 
-        Instantiate(enemy, spawnPoints[randSpawn].position, transform.rotation);
+        Enemy spawnedEnemy = Instantiate(enemy, spawnPoints[randSpawn].position, Quaternion.identity);
+        spawnedEnemy.player = player;
     }
 }

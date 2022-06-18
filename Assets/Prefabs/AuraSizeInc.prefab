@@ -15,6 +15,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1592369202, guid: 682e84fa21654f44b9a0cd74d6496634, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 1592369203, guid: 682e84fa21654f44b9a0cd74d6496634, type: 3}
       propertyPath: InitialModule.startColor.minColor.b
       value: 0.754717
@@ -40,6 +44,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2006346137592944287, guid: 682e84fa21654f44b9a0cd74d6496634, type: 3}
+      propertyPath: basicGameData
+      value: 
+      objectReference: {fileID: 11400000, guid: f87fa9259a799c5428e563ee0d32fded, type: 2}
+    - target: {fileID: 2006346137592944287, guid: 682e84fa21654f44b9a0cd74d6496634, type: 3}
       propertyPath: damageModifier
       value: 0
       objectReference: {fileID: 0}
@@ -63,6 +71,18 @@ PrefabInstance:
       propertyPath: particlesAfterPickup
       value: 
       objectReference: {fileID: 4414673186766366656}
+    - target: {fileID: 3699639660834378248, guid: 682e84fa21654f44b9a0cd74d6496634, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3699639660834378248, guid: 682e84fa21654f44b9a0cd74d6496634, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3699639660834378248, guid: 682e84fa21654f44b9a0cd74d6496634, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8655545032749269352, guid: 682e84fa21654f44b9a0cd74d6496634, type: 3}
       propertyPath: m_Name
       value: AuraSizeInc
@@ -143,6 +163,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8655545032749269355, guid: 682e84fa21654f44b9a0cd74d6496634, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 9120136855289702308, guid: 682e84fa21654f44b9a0cd74d6496634, type: 3}
       propertyPath: m_Size.x
       value: 0.31892422

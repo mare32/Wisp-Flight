@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Powerup : MonoBehaviour
 {
+
+    public BasicGameData basicGameData;
+
     public Player player;
     public PlayerMovement playerMovement;
     public MovePlayer movePlayer;
@@ -21,17 +24,17 @@ public class Powerup : MonoBehaviour
     public float increaseAuraValue = .5f;
     public GameObject particlesAfterPickup;
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake ()
     {
-        
+        //TODO implement better refererncing
+        if (player == null)
+        {
+            player = FindObjectOfType<GameElements>().playerReference;
+            playerMovement = player.gameObject.GetComponent<PlayerMovement>();
+            movePlayer = player.gameObject.GetComponent<MovePlayer>();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
@@ -100,5 +103,15 @@ public class Powerup : MonoBehaviour
     void IncreaseAuraRadius()
     {
         player.aura.localScale = new Vector3(player.aura.localScale.x + increaseAuraValue, player.aura.localScale.y + increaseAuraValue, 0);
+    }
+
+    void FixedUpdate ()
+    {
+        GravityConstant();
+    }
+
+    void GravityConstant ()
+    {
+        transform.position += new Vector3 (basicGameData.constantGravityModifier.x * Time.deltaTime, basicGameData.constantGravityModifier.y * Time.deltaTime, 0);
     }
 }

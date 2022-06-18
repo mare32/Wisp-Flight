@@ -20,7 +20,7 @@ public class PlayerDamage : MonoBehaviour
     {
         if (collision.tag == "Enemy")
         {
-            Enemy enemy = collision.GetComponent<Enemy>();
+            Enemy enemy = collision.transform.parent.GetComponent<Enemy>();
             enemy.TakeDamage(player.passiveDamage);
         }
     }

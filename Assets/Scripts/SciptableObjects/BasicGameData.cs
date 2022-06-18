@@ -5,5 +5,5 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "BasicGameData", menuName = "BasicGameData")]
 public class BasicGameData : ScriptableObject
 {
-    public float constantGravityModifier = 1.0f;
+    public Vector2 constantGravityModifier = new Vector2(0.0f, -1.0f);
 }
