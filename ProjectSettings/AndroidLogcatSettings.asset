@@ -1,9 +1,9 @@
 {
     "m_SelectedDeviceId": "c7def9d8",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "c7def9d8",
+        "name": "com.DefaultCompany.com.unity.template.mobile2D",
+        "processId": 16768,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -42,6 +42,12 @@
             "deviceId": "c7def9d8",
             "name": "com.qqlabs.minimalistlauncher",
             "processId": 17220,
+            "exited": false
+        },
+        {
+            "deviceId": "c7def9d8",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 16768,
             "exited": false
         }
     ],
